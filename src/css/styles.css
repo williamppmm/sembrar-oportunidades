@@ -49,6 +49,22 @@ a{color:inherit;text-decoration:none}
 .nav a:hover{background:rgba(30,27,46,.06);color:var(--ink)}
 .nav a.active{background:rgba(30,27,46,.08);color:var(--ink);font-weight:800}
 
+.hamburger{
+  display:none;
+  flex-direction:column;justify-content:center;gap:5px;
+  background:none;border:none;cursor:pointer;
+  padding:8px;margin-left:auto;
+  z-index:60;
+}
+.hamburger span{
+  display:block;width:24px;height:2px;
+  background:var(--ink);border-radius:2px;
+  transition:transform .25s ease, opacity .2s ease;
+}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
 .btn{
   display:inline-flex;align-items:center;justify-content:center;
   padding:12px 16px;border-radius:999px;
@@ -175,7 +191,21 @@ a{color:inherit;text-decoration:none}
 }
 
 @media (max-width:980px){
-  .nav{display:none;}
+  .hamburger{display:flex}
+  .topbar{flex-wrap:wrap}
+  .nav{
+    display:none;
+    flex-direction:column;
+    width:100%;
+    order:10;
+    gap:0;
+    padding:8px 0 4px;
+    border-top:1px solid var(--stroke);
+    margin-top:8px;
+  }
+  .nav.open{display:flex}
+  .nav a{padding:12px 10px;border-radius:12px;font-size:15px}
+  .btn--whatsapp{order:9}
   .page-hero__inner{grid-template-columns:1fr;}
   .cards,.workshops,.two-col,.contact-grid{grid-template-columns:1fr;}
   .poster-grid{grid-template-columns:1fr;}

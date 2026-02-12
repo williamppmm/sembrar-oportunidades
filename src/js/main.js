@@ -29,6 +29,31 @@ if (cta312) cta312.href = waLink(WA_PRIMARY, MSG_GENERAL);
 const cta317 = document.getElementById("ctaContact317");
 if (cta317) cta317.href = waLink(WA_SECONDARY, MSG_GENERAL);
 
+// Menú hamburguesa (móvil)
+(function mobileMenu(){
+  const btn = document.getElementById("menuToggle");
+  const nav = document.querySelector(".nav");
+  if (!btn || !nav) return;
+
+  btn.addEventListener("click", function(){
+    const open = !nav.classList.contains("open");
+    nav.classList.toggle("open", open);
+    btn.classList.toggle("open", open);
+    btn.setAttribute("aria-expanded", open);
+    btn.setAttribute("aria-label", open ? "Cerrar menú" : "Abrir menú");
+  });
+
+  // Cerrar al hacer clic en un enlace
+  nav.querySelectorAll("a").forEach(function(a){
+    a.addEventListener("click", function(){
+      nav.classList.remove("open");
+      btn.classList.remove("open");
+      btn.setAttribute("aria-expanded", "false");
+      btn.setAttribute("aria-label", "Abrir menú");
+    });
+  });
+})();
+
 // Active nav (por página)
 (function setActiveNav(){
   const path = (location.pathname.split("/").pop() || "index.html").toLowerCase();
