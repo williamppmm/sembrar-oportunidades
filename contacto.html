@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contáctanos - Sembrando Oportunidades Cali">
+    <title>Contacto | Sembrando Oportunidades</title>
+    <link rel="stylesheet" href="src/css/styles.css">
+    <link rel="icon" type="image/png" href="public/images/favicon.png">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav__logo">
+                <img src="public/images/logo1.png" alt="Sembrando Oportunidades" onerror="this.style.display='none'">
+                <span>Sembrando Oportunidades</span>
+            </div>
+            <ul class="nav__menu" id="navMenu">
+                <li><a href="index.html" class="nav__link">Inicio</a></li>
+                <li><a href="index.html#nosotros" class="nav__link">Nosotros</a></li>
+                <li><a href="talleres.html" class="nav__link">Talleres</a></li>
+                <li><a href="index.html#instructores" class="nav__link">Únete</a></li>
+                <li><a href="contacto.html" class="nav__link active">Contacto</a></li>
+            </ul>
+            <div class="nav__toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Contáctanos</h1>
+            <p>Estamos aquí para responder tus preguntas</p>
+        </div>
+    </section>
+
+    <!-- Contacto Section -->
+    <section class="contacto">
+        <div class="container">
+            <div class="contacto__grid">
+                <!-- Información de Contacto -->
+                <div class="contacto__info">
+                    <h2>Información de Contacto</h2>
+                    <p>
+                        La forma más rápida de comunicarte con nosotros es a través de WhatsApp. 
+                        Respondemos consultas sobre talleres, inscripciones y oportunidades de voluntariado.
+                    </p>
+                    
+                    <div class="contacto__details">
+                        <div class="contacto__item">
+                            <h3>📱 WhatsApp</h3>
+                            <p><a href="https://wa.me/573127630952" target="_blank">+57 312 763 0952</a></p>
+                            <p class="contacto__note">Horario: Lunes a Viernes, 9:00 AM - 6:00 PM</p>
+                        </div>
+
+                        <div class="contacto__item">
+                            <h3>📍 Ubicación</h3>
+                            <p>Sede CIBASURCALI<br>Barrio Mariano Ramos<br>Cali, Colombia</p>
+                        </div>
+
+                        <div class="contacto__item">
+                            <h3>🏢 Fundación</h3>
+                            <p>Sembrando Oportunidades<br>Fundación sin ánimo de lucro</p>
+                        </div>
+                    </div>
+
+                    <div class="contacto__cta">
+                        <a href="https://wa.me/573127630952?text=Hola!%20Quiero%20más%20información" 
+                           target="_blank" 
+                           class="btn btn--primary btn--large">
+                            Escribir por WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Formulario de Contacto -->
+                <div class="contacto__form-wrapper">
+                    <h2>Envíanos un Mensaje</h2>
+                    <p>También puedes dejarnos tu mensaje aquí y te contactaremos pronto.</p>
+                    
+                    <form class="contacto__form" id="contactForm">
+                        <div class="form__group">
+                            <label for="nombre">Nombre completo *</label>
+                            <input type="text" id="nombre" name="nombre" required>
+                        </div>
+
+                        <div class="form__group">
+                            <label for="telefono">Teléfono / WhatsApp *</label>
+                            <input type="tel" id="telefono" name="telefono" required>
+                        </div>
+
+                        <div class="form__group">
+                            <label for="email">Correo electrónico</label>
+                            <input type="email" id="email" name="email">
+                        </div>
+
+                        <div class="form__group">
+                            <label for="motivo">Motivo de contacto *</label>
+                            <select id="motivo" name="motivo" required>
+                                <option value="">Selecciona una opción</option>
+                                <option value="inscripcion">Inscripción a talleres</option>
+                                <option value="instructor">Quiero ser instructor</option>
+                                <option value="alianza">Alianzas y colaboraciones</option>
+                                <option value="informacion">Información general</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+
+                        <div class="form__group">
+                            <label for="mensaje">Mensaje *</label>
+                            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn--primary">Enviar Mensaje</button>
+                        
+                        <p class="form__note">
+                            * Campos obligatorios. Al enviar este formulario, aceptas que podamos 
+                            contactarte para responder a tu consulta.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Preguntas Frecuentes -->
+    <section class="faq">
+        <div class="container">
+            <h2 class="section__title">Preguntas Frecuentes</h2>
+            <div class="faq__grid">
+                <div class="faq__item">
+                    <h3>¿Cuál es el costo de los talleres?</h3>
+                    <p>
+                        Los talleres funcionan con un sistema de "aporte solidario" que cubre los costos 
+                        operativos y materiales. Contáctanos por WhatsApp para conocer el aporte sugerido.
+                    </p>
+                </div>
+
+                <div class="faq__item">
+                    <h3>¿Necesito experiencia previa?</h3>
+                    <p>
+                        No, nuestros talleres están diseñados para personas sin experiencia previa. 
+                        Solo necesitas tener más de 16 años y ganas de aprender.
+                    </p>
+                </div>
+
+                <div class="faq__item">
+                    <h3>¿Cuándo empiezan los talleres?</h3>
+                    <p>
+                        Los talleres se programan según la demanda. Contáctanos para conocer las 
+                        próximas fechas disponibles.
+                    </p>
+                </div>
+
+                <div class="faq__item">
+                    <h3>¿Entregan certificado?</h3>
+                    <p>
+                        Sí, al completar el taller recibes un certificado de participación de la 
+                        Fundación Sembrando Oportunidades.
+                    </p>
+                </div>
+
+                <div class="faq__item">
+                    <h3>¿Incluyen materiales?</h3>
+                    <p>
+                        Sí, todos los materiales necesarios para las prácticas están incluidos en 
+                        el aporte solidario del taller.
+                    </p>
+                </div>
+
+                <div class="faq__item">
+                    <h3>¿Puedo ser instructor voluntario?</h3>
+                    <p>
+                        ¡Por supuesto! Buscamos personas comprometidas que quieran compartir sus 
+                        habilidades. Contáctanos para más información.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <h4>Sembrando Oportunidades</h4>
+                    <p>Fundación sin ánimo de lucro</p>
+                    <p>Cali, Colombia</p>
+                </div>
+                <div class="footer__section">
+                    <h4>Contacto</h4>
+                    <p>WhatsApp: <a href="https://wa.me/573127630952" target="_blank">+57 312 763 0952</a></p>
+                    <p><a href="contacto.html">Formulario de contacto</a></p>
+                </div>
+                <div class="footer__section">
+                    <h4>Enlaces</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="index.html#nosotros">Nosotros</a></li>
+                        <li><a href="talleres.html">Talleres</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2026 Sembrando Oportunidades. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="src/js/main.js"></script>
+</body>
+</html>

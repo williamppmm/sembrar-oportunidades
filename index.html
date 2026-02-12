@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fundación Sembrando Oportunidades Cali - Talleres prácticos para mujeres, jóvenes y madres cabeza de hogar">
+    <title>Sembrando Oportunidades | Cali, Colombia</title>
+    <link rel="stylesheet" href="src/css/styles.css">
+    <link rel="icon" type="image/png" href="public/images/favicon.png">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav__logo">
+                <img src="public/images/logo1.png" alt="Sembrando Oportunidades" onerror="this.style.display='none'">
+                <span>Sembrando Oportunidades</span>
+            </div>
+            <ul class="nav__menu" id="navMenu">
+                <li><a href="#inicio" class="nav__link active">Inicio</a></li>
+                <li><a href="#nosotros" class="nav__link">Nosotros</a></li>
+                <li><a href="talleres.html" class="nav__link">Talleres</a></li>
+                <li><a href="#instructores" class="nav__link">Únete</a></li>
+                <li><a href="contacto.html" class="nav__link">Contacto</a></li>
+            </ul>
+            <div class="nav__toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="hero__content container">
+            <h1 class="hero__title">Sembramos habilidades,<br>cosechamos oportunidades</h1>
+            <p class="hero__description">
+                Talleres prácticos y accesibles para mujeres, jóvenes y madres cabeza de hogar en Cali, Colombia.
+            </p>
+            <div class="hero__buttons">
+                <a href="talleres.html" class="btn btn--primary">Ver Talleres</a>
+                <a href="https://wa.me/573127630952?text=Hola!%20Me%20interesa%20conocer%20más%20sobre%20los%20talleres" 
+                   target="_blank" 
+                   class="btn btn--secondary">
+                    Contactar por WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nosotros Section -->
+    <section class="about" id="nosotros">
+        <div class="container">
+            <h2 class="section__title">¿Quiénes Somos?</h2>
+            <div class="about__content">
+                <div class="about__text">
+                    <p>
+                        Somos una fundación sin ánimo de lucro ubicada en Cali, Colombia, comprometida con 
+                        el desarrollo de habilidades prácticas en comunidades vulnerables.
+                    </p>
+                    <p>
+                        Nuestros talleres están dirigidos a mujeres, jóvenes y madres cabeza de hogar, 
+                        brindándoles herramientas útiles tanto para su vida diaria como para impulsar 
+                        pequeños emprendimientos.
+                    </p>
+                    <div class="about__stats">
+                        <div class="stat">
+                            <span class="stat__number">3</span>
+                            <span class="stat__label">Talleres Activos</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat__number">~20</span>
+                            <span class="stat__label">Cupos por Taller</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat__number">8h</span>
+                            <span class="stat__label">Duración</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about__image">
+                    <img src="public/images/logo2.png" alt="Fundación Sembrando Oportunidades" onerror="this.style.display='none'">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Talleres Preview -->
+    <section class="talleres-preview">
+        <div class="container">
+            <h2 class="section__title">Nuestros Talleres</h2>
+            <p class="section__subtitle">
+                Talleres prácticos de 8 horas (4 sesiones de 2h) impartidos los fines de semana
+            </p>
+            <div class="talleres__grid">
+                <div class="taller-card">
+                    <div class="taller-card__icon">💇‍♀️</div>
+                    <h3>Tratamientos Capilares</h3>
+                    <p>Aprende técnicas profesionales para el cuidado y tratamiento del cabello.</p>
+                    <a href="talleres.html#tratamientos" class="btn btn--small">Más información</a>
+                </div>
+                <div class="taller-card">
+                    <div class="taller-card__icon">🍰</div>
+                    <h3>Postres en Frío</h3>
+                    <p>Domina el arte de crear deliciosos postres sin necesidad de horno.</p>
+                    <a href="talleres.html#postres" class="btn btn--small">Más información</a>
+                </div>
+                <div class="taller-card">
+                    <div class="taller-card__icon">🧼</div>
+                    <h3>Jabones Artesanales</h3>
+                    <p>Elabora jabones naturales con macerados de plantas medicinales.</p>
+                    <a href="talleres.html#jabones" class="btn btn--small">Más información</a>
+                </div>
+            </div>
+            <div class="talleres__cta">
+                <a href="talleres.html" class="btn btn--primary">Ver Todos los Talleres</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instructores -->
+    <section class="instructores" id="instructores">
+        <div class="container">
+            <h2 class="section__title">Únete como Instructor</h2>
+            <div class="instructores__content">
+                <p>
+                    ¿Tienes una habilidad práctica que quieras compartir? Buscamos instructores y 
+                    aliados educativos comprometidos con nuestra misión social.
+                </p>
+                <ul class="instructores__list">
+                    <li>✓ Enseñanza voluntaria con propósito social</li>
+                    <li>✓ Flexible: talleres de fin de semana</li>
+                    <li>✓ Impacto directo en comunidades vulnerables</li>
+                    <li>✓ Apoyo logístico y administrativo de la fundación</li>
+                </ul>
+                <a href="https://wa.me/573127630952?text=Hola!%20Me%20gustaría%20ser%20instructor%20voluntario" 
+                   target="_blank" 
+                   class="btn btn--primary">
+                    Quiero ser Instructor
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ubicación -->
+    <section class="ubicacion">
+        <div class="container">
+            <h2 class="section__title">Dónde Nos Encontramos</h2>
+            <div class="ubicacion__info">
+                <div class="ubicacion__text">
+                    <h3>Sede CIBASURCALI</h3>
+                    <p>Barrio Mariano Ramos<br>Cali, Colombia</p>
+                    <p class="ubicacion__note">
+                        Todos nuestros talleres se imparten presencialmente en esta ubicación.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <h4>Sembrando Oportunidades</h4>
+                    <p>Fundación sin ánimo de lucro</p>
+                    <p>Cali, Colombia</p>
+                </div>
+                <div class="footer__section">
+                    <h4>Contacto</h4>
+                    <p>WhatsApp: <a href="https://wa.me/573127630952" target="_blank">+57 312 763 0952</a></p>
+                    <p><a href="contacto.html">Formulario de contacto</a></p>
+                </div>
+                <div class="footer__section">
+                    <h4>Enlaces</h4>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#nosotros">Nosotros</a></li>
+                        <li><a href="talleres.html">Talleres</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2026 Sembrando Oportunidades. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="src/js/main.js"></script>
+</body>
+</html>
