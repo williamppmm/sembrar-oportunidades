@@ -1,229 +1,136 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Talleres prácticos: Tratamientos Capilares, Postres en Frío, Jabones Artesanales">
-    <title>Talleres | Sembrando Oportunidades</title>
-    <link rel="stylesheet" href="src/css/styles.css">
-    <link rel="icon" type="image/png" href="public/images/favicon.png">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Talleres | Fundación Sembrando Oportunidades Cali</title>
+  <meta name="description" content="Conoce nuestros talleres prácticos: capilares, postres en frío, jabones artesanales y macerados." />
+  <link rel="stylesheet" href="src/css/styles.css" />
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <nav class="nav container">
-            <div class="nav__logo">
-                <img src="public/images/logo1.png" alt="Sembrando Oportunidades" onerror="this.style.display='none'">
-                <span>Sembrando Oportunidades</span>
-            </div>
-            <ul class="nav__menu" id="navMenu">
-                <li><a href="index.html" class="nav__link">Inicio</a></li>
-                <li><a href="index.html#nosotros" class="nav__link">Nosotros</a></li>
-                <li><a href="talleres.html" class="nav__link active">Talleres</a></li>
-                <li><a href="index.html#instructores" class="nav__link">Únete</a></li>
-                <li><a href="contacto.html" class="nav__link">Contacto</a></li>
-            </ul>
-            <div class="nav__toggle" id="navToggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </nav>
-    </header>
+<header class="topbar">
+  <a class="brand" href="index.html">
+    <img src="assets/images/logo1.png" alt="Isotipo" class="brand__mark" />
+    <div class="brand__text">
+      <span class="brand__name">Fundación Sembrando Oportunidades Cali</span>
+      <span class="brand__tag">Sembramos habilidades, cosechamos oportunidades.</span>
+    </div>
+  </a>
 
-    <!-- Page Header -->
-    <section class="page-header">
-        <div class="container">
-            <h1>Nuestros Talleres</h1>
-            <p>Aprende habilidades prácticas para tu vida y tu emprendimiento</p>
+  <nav class="nav">
+    <a href="index.html">Inicio</a>
+    <a href="talleres.html">Talleres</a>
+    <a href="apoya.html">Apoya</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
+
+  <a class="btn btn--whatsapp" id="ctaTop" href="#" rel="noopener">WhatsApp</a>
+</header>
+
+<main class="page-hero">
+  <div class="container page-hero__inner">
+    <div>
+      <h1>Talleres</h1>
+      <p class="sublead">
+        Próximamente abriremos convocatorias. Para fechas, cupos, requisitos y aporte solidario, escríbenos por WhatsApp.
+      </p>
+      <div class="cta-box">
+        <div>
+          <h3>Modalidad</h3>
+          <p>8 horas (4×2h) · Sáb/Dom · Cupo aprox. 20 · 16+ · CIBASURCALI</p>
         </div>
-    </section>
+        <a class="btn btn--primary" id="ctaHero" href="#" rel="noopener">Pedir información</a>
+      </div>
+    </div>
 
-    <!-- Información General -->
-    <section class="talleres-info">
-        <div class="container">
-            <div class="info-grid">
-                <div class="info-card">
-                    <h3>⏱️ Duración</h3>
-                    <p>8 horas totales<br>(4 sesiones de 2h)</p>
-                </div>
-                <div class="info-card">
-                    <h3>📅 Horario</h3>
-                    <p>Sábados o domingos<br>(según disponibilidad)</p>
-                </div>
-                <div class="info-card">
-                    <h3>👥 Cupos</h3>
-                    <p>~20 personas<br>por taller</p>
-                </div>
-                <div class="info-card">
-                    <h3>🎓 Requisitos</h3>
-                    <p>Mayores de 16 años<br>Ganas de aprender</p>
-                </div>
-            </div>
-            <div class="info-banner">
-                <p><strong>📍 Ubicación:</strong> Sede CIBASURCALI, Barrio Mariano Ramos, Cali</p>
-                <p><strong>💰 Aporte solidario:</strong> Cubre costos operativos y materiales</p>
-            </div>
+    <div style="display:flex; justify-content:center;">
+      <img src="assets/images/logo2.png" alt="Logo Fundación" class="hero__logo" />
+    </div>
+  </div>
+</main>
+
+<section class="section">
+  <div class="container">
+    <div class="workshops">
+      <article class="workshop">
+        <div class="workshop__title">
+          <h3>Taller de tratamientos capilares</h3>
+          <span class="badge">Belleza & cuidado</span>
         </div>
-    </section>
-
-    <!-- Taller 1: Tratamientos Capilares -->
-    <section class="taller-detail" id="tratamientos">
-        <div class="container">
-            <div class="taller-detail__content">
-                <div class="taller-detail__text">
-                    <div class="taller-detail__icon">💇‍♀️</div>
-                    <h2>Tratamientos Capilares</h2>
-                    <p class="taller-detail__intro">
-                        Aprende técnicas profesionales para el cuidado, restauración y embellecimiento del cabello. 
-                        Ideal para quienes desean trabajar en el área de belleza o cuidar mejor su propio cabello.
-                    </p>
-                    <h3>¿Qué aprenderás?</h3>
-                    <ul class="taller-detail__list">
-                        <li>Identificación de tipos de cabello y cuero cabelludo</li>
-                        <li>Técnicas de hidratación profunda</li>
-                        <li>Tratamientos de reconstrucción capilar</li>
-                        <li>Aplicación de nutrientes y proteínas</li>
-                        <li>Cuidados post-tratamiento</li>
-                        <li>Elaboración de productos caseros naturales</li>
-                    </ul>
-                    <h3>Dirigido a:</h3>
-                    <p>
-                        Mujeres, jóvenes y madres cabeza de hogar interesadas en ofrecer servicios de belleza 
-                        o en el autocuidado profesional.
-                    </p>
-                    <a href="https://wa.me/573127630952?text=Hola!%20Me%20interesa%20el%20taller%20de%20Tratamientos%20Capilares" 
-                       target="_blank" 
-                       class="btn btn--primary">
-                        Inscribirme por WhatsApp
-                    </a>
-                </div>
-                <div class="taller-detail__image">
-                    <img src="public/images/poster-talleres.png" alt="Tratamientos Capilares" onerror="this.style.display='none'">
-                </div>
-            </div>
+        <ul class="list">
+          <li>Teoría y tipos de hebra capilar</li>
+          <li>Tipos de tratamientos</li>
+          <li>Realización de mascarillas capilares</li>
+          <li>Cómo realizar una hidratación capilar</li>
+          <li>Corrección de daños capilares</li>
+          <li>Elaboración de bomba reparadora</li>
+        </ul>
+        <div class="meta">
+          <span>⏱ 8 horas (4×2h)</span><span>📅 Sáb/Dom</span><span>👥 20</span><span>🎯 16+</span>
         </div>
-    </section>
+        <a class="btn btn--primary" data-wa-topic="taller de tratamientos capilares" href="#" rel="noopener">
+          Quiero información por WhatsApp
+        </a>
+      </article>
 
-    <!-- Taller 2: Postres en Frío -->
-    <section class="taller-detail taller-detail--alt" id="postres">
-        <div class="container">
-            <div class="taller-detail__content">
-                <div class="taller-detail__image">
-                    <img src="public/images/poster-talleres.png" alt="Postres en Frío" onerror="this.style.display='none'">
-                </div>
-                <div class="taller-detail__text">
-                    <div class="taller-detail__icon">🍰</div>
-                    <h2>Postres en Frío</h2>
-                    <p class="taller-detail__intro">
-                        Domina el arte de crear postres deliciosos sin necesidad de horno. Aprende técnicas 
-                        sencillas pero profesionales para iniciar tu propio emprendimiento de repostería.
-                    </p>
-                    <h3>¿Qué aprenderás?</h3>
-                    <ul class="taller-detail__list">
-                        <li>Cheesecakes clásicos y de sabores</li>
-                        <li>Mousse de chocolate y frutas</li>
-                        <li>Tartas y pays sin horno</li>
-                        <li>Copas y vasitos decorados</li>
-                        <li>Técnicas de decoración</li>
-                        <li>Cálculo de costos y fijación de precios</li>
-                    </ul>
-                    <h3>Dirigido a:</h3>
-                    <p>
-                        Personas interesadas en iniciar un negocio de postres desde casa, sin inversión 
-                        en equipos costosos como hornos.
-                    </p>
-                    <a href="https://wa.me/573127630952?text=Hola!%20Me%20interesa%20el%20taller%20de%20Postres%20en%20Frío" 
-                       target="_blank" 
-                       class="btn btn--primary">
-                        Inscribirme por WhatsApp
-                    </a>
-                </div>
-            </div>
+      <article class="workshop">
+        <div class="workshop__title">
+          <h3>Taller de postres en frío</h3>
+          <span class="badge">Repostería</span>
         </div>
-    </section>
-
-    <!-- Taller 3: Jabones Artesanales -->
-    <section class="taller-detail" id="jabones">
-        <div class="container">
-            <div class="taller-detail__content">
-                <div class="taller-detail__text">
-                    <div class="taller-detail__icon">🧼</div>
-                    <h2>Jabones Artesanales con Macerados</h2>
-                    <p class="taller-detail__intro">
-                        Aprende a elaborar jabones naturales utilizando macerados de plantas medicinales. 
-                        Una oportunidad perfecta para crear productos de cuidado personal únicos y sostenibles.
-                    </p>
-                    <h3>¿Qué aprenderás?</h3>
-                    <ul class="taller-detail__list">
-                        <li>Proceso de maceración de plantas medicinales</li>
-                        <li>Elaboración de jabones con aceites naturales</li>
-                        <li>Técnicas de saponificación segura</li>
-                        <li>Aromatización y coloración natural</li>
-                        <li>Moldeado y curado de jabones</li>
-                        <li>Empaquetado y presentación profesional</li>
-                    </ul>
-                    <h3>Dirigido a:</h3>
-                    <p>
-                        Personas interesadas en productos naturales, emprendimientos sostenibles y 
-                        elaboración de artículos de cuidado personal.
-                    </p>
-                    <a href="https://wa.me/573127630952?text=Hola!%20Me%20interesa%20el%20taller%20de%20Jabones%20Artesanales" 
-                       target="_blank" 
-                       class="btn btn--primary">
-                        Inscribirme por WhatsApp
-                    </a>
-                </div>
-                <div class="taller-detail__image">
-                    <img src="public/images/poster-talleres.png" alt="Jabones Artesanales" onerror="this.style.display='none'">
-                </div>
-            </div>
+        <ul class="list">
+          <li>Teoría</li>
+          <li>Variedades de fresas con crema</li>
+          <li>Postre tipo genovesa</li>
+          <li>Postre en capas</li>
+          <li>Merengones</li>
+          <li>Dip: dulces y salados</li>
+        </ul>
+        <div class="meta">
+          <span>⏱ 8 horas (4×2h)</span><span>📅 Sáb/Dom</span><span>👥 20</span><span>🎯 16+</span>
         </div>
-    </section>
+        <a class="btn btn--primary" data-wa-topic="taller de postres en frío" href="#" rel="noopener">
+          Quiero información por WhatsApp
+        </a>
+      </article>
 
-    <!-- CTA Final -->
-    <section class="cta-section">
-        <div class="container">
-            <h2>¿Listo para Aprender?</h2>
-            <p>Contáctanos por WhatsApp y reserva tu cupo en el próximo taller</p>
-            <a href="https://wa.me/573127630952?text=Hola!%20Quiero%20información%20sobre%20los%20talleres" 
-               target="_blank" 
-               class="btn btn--primary btn--large">
-                Contactar por WhatsApp
-            </a>
+      <article class="workshop">
+        <div class="workshop__title">
+          <h3>Taller de jabones artesanales y macerados</h3>
+          <span class="badge">Artesanal</span>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer__content">
-                <div class="footer__section">
-                    <h4>Sembrando Oportunidades</h4>
-                    <p>Fundación sin ánimo de lucro</p>
-                    <p>Cali, Colombia</p>
-                </div>
-                <div class="footer__section">
-                    <h4>Contacto</h4>
-                    <p>WhatsApp: <a href="https://wa.me/573127630952" target="_blank">+57 312 763 0952</a></p>
-                    <p><a href="contacto.html">Formulario de contacto</a></p>
-                </div>
-                <div class="footer__section">
-                    <h4>Enlaces</h4>
-                    <ul>
-                        <li><a href="index.html">Inicio</a></li>
-                        <li><a href="index.html#nosotros">Nosotros</a></li>
-                        <li><a href="talleres.html">Talleres</a></li>
-                        <li><a href="contacto.html">Contacto</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer__bottom">
-                <p>&copy; 2026 Sembrando Oportunidades. Todos los derechos reservados.</p>
-            </div>
+        <ul class="list">
+          <li>Teoría</li>
+          <li>Diferentes clases de jabones medicinales</li>
+          <li>Diferentes clases de macerados en frío y calientes</li>
+          <li>Técnicas de mezclas y decoración natural</li>
+          <li>Propiedades medicinales y tipos de aceites</li>
+          <li>Desmolde y conservación</li>
+        </ul>
+        <div class="meta">
+          <span>⏱ 8 horas (4×2h)</span><span>📅 Sáb/Dom</span><span>👥 20</span><span>🎯 16+</span>
         </div>
-    </footer>
+        <a class="btn btn--primary" data-wa-topic="taller de jabones artesanales y macerados" href="#" rel="noopener">
+          Quiero información por WhatsApp
+        </a>
+      </article>
+    </div>
+  </div>
+</section>
 
-    <script src="src/js/main.js"></script>
+<footer class="footer">
+  <div class="container footer__inner">
+    <div>
+      <strong>Fundación Sembrando Oportunidades Cali</strong><br />
+      <span class="small">www.sembrandooportunidades.org</span>
+    </div>
+    <div class="small">
+      Cali, Colombia · CIBASURCALI
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/talleres.js"></script>
 </body>
 </html>
