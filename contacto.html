@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -6,29 +6,26 @@
     <meta name="description" content="Contáctanos - Sembrando Oportunidades Cali">
     <title>Contacto | Sembrando Oportunidades</title>
     <link rel="stylesheet" href="src/css/styles.css">
-    <link rel="icon" type="image/png" href="public/images/favicon.png">
 </head>
 <body>
     <!-- Header -->
-    <header class="header">
-        <nav class="nav container">
-            <div class="nav__logo">
-                <img src="public/images/logo1.png" alt="Sembrando Oportunidades" onerror="this.style.display='none'">
-                <span>Sembrando Oportunidades</span>
+    <header class="topbar">
+        <a class="brand" href="index.html">
+            <img src="assets/images/logo1.png" alt="Isotipo" class="brand__mark" />
+            <div class="brand__text">
+                <span class="brand__name">Fundación Sembrando Oportunidades Cali</span>
+                <span class="brand__tag">Sembramos habilidades, cosechamos oportunidades.</span>
             </div>
-            <ul class="nav__menu" id="navMenu">
-                <li><a href="index.html" class="nav__link">Inicio</a></li>
-                <li><a href="index.html#nosotros" class="nav__link">Nosotros</a></li>
-                <li><a href="talleres.html" class="nav__link">Talleres</a></li>
-                <li><a href="index.html#instructores" class="nav__link">Únete</a></li>
-                <li><a href="contacto.html" class="nav__link active">Contacto</a></li>
-            </ul>
-            <div class="nav__toggle" id="navToggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+        </a>
+
+        <nav class="nav" aria-label="Navegación">
+            <a href="index.html">Inicio</a>
+            <a href="talleres.html">Talleres</a>
+            <a href="apoya.html">Apoya</a>
+            <a href="contacto.html">Contacto</a>
         </nav>
+
+        <a class="btn btn--whatsapp" id="ctaTop" href="#" rel="noopener">WhatsApp</a>
     </header>
 
     <!-- Page Header -->
@@ -184,36 +181,21 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer__content">
-                <div class="footer__section">
-                    <h4>Sembrando Oportunidades</h4>
-                    <p>Fundación sin ánimo de lucro</p>
-                    <p>Cali, Colombia</p>
-                </div>
-                <div class="footer__section">
-                    <h4>Contacto</h4>
-                    <p>WhatsApp: <a href="https://wa.me/573127630952" target="_blank">+57 312 763 0952</a></p>
-                    <p><a href="contacto.html">Formulario de contacto</a></p>
-                </div>
-                <div class="footer__section">
-                    <h4>Enlaces</h4>
-                    <ul>
-                        <li><a href="index.html">Inicio</a></li>
-                        <li><a href="index.html#nosotros">Nosotros</a></li>
-                        <li><a href="talleres.html">Talleres</a></li>
-                        <li><a href="contacto.html">Contacto</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer__bottom">
-                <p>&copy; 2026 Sembrando Oportunidades. Todos los derechos reservados.</p>
-            </div>
-        </div>
-    </footer>
+<footer class="footer">
+  <div class="container footer__inner">
+    <div>
+      <strong>Fundación Sembrando Oportunidades Cali</strong><br />
+      <span class="small">www.sembrandooportunidades.org</span>
+    </div>
+    <div class="small">
+      Cali, Colombia · CIBASURCALI
+    </div>
+  </div>
+</footer>
 
     <script src="src/js/main.js"></script>
 </body>
 </html>
+
+
+
