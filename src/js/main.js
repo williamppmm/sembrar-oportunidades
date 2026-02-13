@@ -23,11 +23,17 @@ if (ctaHero) ctaHero.href = waLink(WA_PRIMARY, MSG_GENERAL);
 const ctaInstructor = document.getElementById("ctaInstructor");
 if (ctaInstructor) ctaInstructor.href = waLink(WA_PRIMARY, MSG_INSTRUCTOR);
 
-const cta312 = document.getElementById("ctaContact312");
-if (cta312) cta312.href = waLink(WA_PRIMARY, MSG_GENERAL);
+const ctaMobile = document.getElementById("ctaMobile");
+if (ctaMobile) ctaMobile.href = waLink(WA_PRIMARY, MSG_GENERAL);
 
-const cta317 = document.getElementById("ctaContact317");
-if (cta317) cta317.href = waLink(WA_SECONDARY, MSG_GENERAL);
+const ctaContactWA = document.getElementById("ctaContactWA");
+if (ctaContactWA) ctaContactWA.href = waLink(WA_PRIMARY, MSG_GENERAL);
+
+// Inyectar número formateado en elementos con data-wa-phone
+document.querySelectorAll("[data-wa-phone]").forEach(function(el){
+  el.href = "https://wa.me/" + WA_PRIMARY;
+  el.textContent = "+57 312 763 0952";
+});
 
 // Menú hamburguesa (móvil)
 (function mobileMenu(){
