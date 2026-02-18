@@ -1,6 +1,5 @@
 // Números (E.164 sin "+")
-const WA_PRIMARY = "573127630952";   // +57 312 763 0952
-const WA_SECONDARY = "573172703742"; // +57 317 270 3742
+const WA_PRIMARY = "573146340912";   // +57 314 634 0912
 
 function waLink(phone, message){
   return `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
@@ -32,7 +31,7 @@ if (ctaContactWA) ctaContactWA.href = waLink(WA_PRIMARY, MSG_GENERAL);
 // Inyectar número formateado en elementos con data-wa-phone
 document.querySelectorAll("[data-wa-phone]").forEach(function(el){
   el.href = "https://wa.me/" + WA_PRIMARY;
-  el.textContent = "+57 312 763 0952";
+  el.textContent = "+57 314 634 0912";
 });
 
 // Menú hamburguesa (móvil)

@@ -80,7 +80,7 @@ npx http-server
 
 ## 📱 Contacto
 
-- **WhatsApp**: +57 312 763 0952
+- **WhatsApp**: +57 314 634 0912
 - **Ubicación**: Sede CIBASURCALI, Barrio Mariano Ramos, Cali, Colombia
 
 ## 🤝 Contribuir
