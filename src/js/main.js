@@ -59,6 +59,37 @@ document.querySelectorAll("[data-wa-phone]").forEach(function(el){
   });
 })();
 
+// EmailJS — formulario de contacto
+(function contactForm(){
+  const form = document.getElementById("contact-form");
+  if (!form) return;
+  if (!window.emailjs) {
+    console.error("EmailJS no se cargó correctamente.");
+    return;
+  }
+
+  emailjs.init("DYyKZ3d-S009rlCII");
+
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+    const btn = form.querySelector("button[type='submit']");
+    btn.disabled = true;
+    btn.textContent = "Enviando...";
+
+    emailjs.sendForm("service_y9yrsrq", "hau23ve", form)
+      .then(function(){
+        btn.textContent = "¡Mensaje enviado!";
+        form.reset();
+      })
+      .catch(function(error){
+        btn.disabled = false;
+        btn.textContent = "Enviar mensaje";
+        console.error(error);
+        alert("Hubo un error al enviar. Por favor escríbenos por WhatsApp.");
+      });
+  });
+})();
+
 // Active nav (por página)
 (function setActiveNav(){
   const path = (location.pathname.split("/").pop() || "index.html").toLowerCase();
