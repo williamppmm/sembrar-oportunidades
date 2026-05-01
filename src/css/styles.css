@@ -361,7 +361,22 @@ a{color:inherit;text-decoration:none}
 }
 .contacto__form .form__group:nth-of-type(5),
 .contacto__form button,
+.contacto__form .form__status,
 .contacto__form .form__note{grid-column:1 / -1;}
+.form__status{
+  margin:0;
+  border-radius:12px;
+  padding:11px 12px;
+  font-weight:700;
+}
+.form__status--success{
+  background:rgba(35,213,171,.14);
+  color:#126b58;
+}
+.form__status--error{
+  background:rgba(220,38,38,.1);
+  color:#9f1239;
+}
 .form__note{
   margin:2px 0 0;
   font-size:13px;

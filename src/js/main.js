@@ -67,8 +67,14 @@ document.querySelectorAll("[data-wa-phone]").forEach(function(el){
   form.addEventListener("submit", function(e){
     e.preventDefault();
     const btn = form.querySelector("button[type='submit']");
+    const status = document.getElementById("form-status");
     btn.disabled = true;
     btn.textContent = "Enviando...";
+    if (status) {
+      status.hidden = true;
+      status.textContent = "";
+      status.className = "form__status";
+    }
 
     const formData = new FormData(form);
     const name = (formData.get("name") || "").toString().trim();
@@ -88,12 +94,20 @@ document.querySelectorAll("[data-wa-phone]").forEach(function(el){
           throw new Error(data.message || "Web3Forms rechazó el envío.");
         }
 
-        alert("¡Mensaje enviado con éxito!");
         form.reset();
+        if (status) {
+          status.hidden = false;
+          status.textContent = "¡Mensaje enviado con éxito! Te contactaremos pronto.";
+          status.className = "form__status form__status--success";
+        }
       })
       .catch(function(error){
         console.error("Web3Forms error:", error);
-        alert("Hubo un error al enviar. Por favor escríbenos por WhatsApp.");
+        if (status) {
+          status.hidden = false;
+          status.textContent = "Hubo un error al enviar. Por favor escríbenos por WhatsApp.";
+          status.className = "form__status form__status--error";
+        }
       })
       .finally(function(){
         btn.disabled = false;
