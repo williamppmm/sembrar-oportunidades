@@ -59,15 +59,10 @@ document.querySelectorAll("[data-wa-phone]").forEach(function(el){
   });
 })();
 
-// EmailJS — formulario de contacto
+// Web3Forms — formulario de contacto
 (function contactForm(){
-  const EMAILJS_PUBLIC_KEY = "DYyKZ3d-S009rlCII";
   const form = document.getElementById("contact-form");
   if (!form) return;
-
-  emailjs.init({
-    publicKey: EMAILJS_PUBLIC_KEY
-  });
 
   form.addEventListener("submit", function(e){
     e.preventDefault();
@@ -75,18 +70,28 @@ document.querySelectorAll("[data-wa-phone]").forEach(function(el){
     btn.disabled = true;
     btn.textContent = "Enviando...";
 
-    emailjs.sendForm("service_y9yrsrq", "template_jl63o4m", form, {
-      publicKey: EMAILJS_PUBLIC_KEY
+    fetch(form.action, {
+      method: "POST",
+      body: new FormData(form)
     })
-      .then(function(){
-        btn.textContent = "¡Mensaje enviado!";
+      .then(function(response){
+        return response.json();
+      })
+      .then(function(data){
+        if (!data.success) {
+          throw new Error(data.message || "Web3Forms rechazó el envío.");
+        }
+
+        alert("¡Mensaje enviado con éxito!");
         form.reset();
       })
       .catch(function(error){
+        console.error("Web3Forms error:", error);
+        alert("Hubo un error al enviar. Por favor escríbenos por WhatsApp.");
+      })
+      .finally(function(){
         btn.disabled = false;
         btn.textContent = "Enviar mensaje";
-        console.error("EmailJS error:", error.status, error.text || error);
-        alert("Hubo un error al enviar. Por favor escríbenos por WhatsApp.");
       });
   });
 })();

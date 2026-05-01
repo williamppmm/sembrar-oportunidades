@@ -112,7 +112,9 @@
         <h2>Envíanos un mensaje</h2>
         <p>También puedes dejarnos tu mensaje aquí y te contactaremos pronto.</p>
 
-        <form class="contacto__form" id="contact-form">
+        <form class="contacto__form" id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="28e733ec-f2ac-4be1-ba09-06dda22ef2be" />
+          <input type="hidden" name="subject" value="Nuevo mensaje de contacto - Fundación Sembrando Oportunidades" />
           <input type="hidden" name="title" value="Mensaje desde el formulario de contacto" />
 
           <div class="form__group">
@@ -239,7 +241,6 @@
 </footer>
 
 <a class="cta-mobile" id="ctaMobile" href="#" rel="noopener">Escríbenos por WhatsApp</a>
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-<script src="src/js/main.js?v=emailjs-20260501"></script>
+<script src="src/js/main.js?v=web3forms-20260501"></script>
 </body>
 </html>
