@@ -60,13 +60,9 @@ document.querySelectorAll("[data-wa-phone]").forEach(function(el){
 })();
 
 // EmailJS — formulario de contacto
-document.addEventListener("DOMContentLoaded", function(){
+(function contactForm(){
   const form = document.getElementById("contact-form");
   if (!form) return;
-  if (!window.emailjs) {
-    console.error("EmailJS no se cargó correctamente.");
-    return;
-  }
 
   emailjs.init("DYyKZ3d-S009rlCII");
 
@@ -88,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function(){
         alert("Hubo un error al enviar. Por favor escríbenos por WhatsApp.");
       });
   });
-});
+})();
 
 // Active nav (por página)
 (function setActiveNav(){
