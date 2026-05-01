@@ -70,9 +70,15 @@ document.querySelectorAll("[data-wa-phone]").forEach(function(el){
     btn.disabled = true;
     btn.textContent = "Enviando...";
 
+    const formData = new FormData(form);
+    const name = (formData.get("name") || "").toString().trim();
+    if (name) {
+      formData.set("subject", "Nuevo mensaje de contacto - " + name);
+    }
+
     fetch(form.action, {
       method: "POST",
-      body: new FormData(form)
+      body: formData
     })
       .then(function(response){
         return response.json();
