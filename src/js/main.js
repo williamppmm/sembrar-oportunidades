@@ -61,10 +61,13 @@ document.querySelectorAll("[data-wa-phone]").forEach(function(el){
 
 // EmailJS — formulario de contacto
 (function contactForm(){
+  const EMAILJS_PUBLIC_KEY = "DYyKZ3d-S009rlCII";
   const form = document.getElementById("contact-form");
   if (!form) return;
 
-  emailjs.init("DYyKZ3d-S009rlCII");
+  emailjs.init({
+    publicKey: EMAILJS_PUBLIC_KEY
+  });
 
   form.addEventListener("submit", function(e){
     e.preventDefault();
@@ -72,7 +75,9 @@ document.querySelectorAll("[data-wa-phone]").forEach(function(el){
     btn.disabled = true;
     btn.textContent = "Enviando...";
 
-    emailjs.sendForm("service_y9yrsrq", "template_jl63o4m", form)
+    emailjs.sendForm("service_y9yrsrq", "template_jl63o4m", form, {
+      publicKey: EMAILJS_PUBLIC_KEY
+    })
       .then(function(){
         btn.textContent = "¡Mensaje enviado!";
         form.reset();
@@ -80,7 +85,7 @@ document.querySelectorAll("[data-wa-phone]").forEach(function(el){
       .catch(function(error){
         btn.disabled = false;
         btn.textContent = "Enviar mensaje";
-        console.error(error);
+        console.error("EmailJS error:", error.status, error.text || error);
         alert("Hubo un error al enviar. Por favor escríbenos por WhatsApp.");
       });
   });
