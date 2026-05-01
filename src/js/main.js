@@ -76,7 +76,7 @@ document.querySelectorAll("[data-wa-phone]").forEach(function(el){
     btn.disabled = true;
     btn.textContent = "Enviando...";
 
-    emailjs.sendForm("service_y9yrsrq", "template_jl63o4m", form)
+    emailjs.sendForm("service_y9yrsrq", "hau23ve", form)
       .then(function(){
         btn.textContent = "¡Mensaje enviado!";
         form.reset();
