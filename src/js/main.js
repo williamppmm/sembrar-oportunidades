@@ -12,6 +12,9 @@ const MSG_GENERAL =
 const MSG_INSTRUCTOR =
   "Hola 👋 Quiero apoyar como instructor(a) / aliado educativo. Puedo dictar un taller sobre: _____. Mi disponibilidad es: _____. ¿Cómo podemos coordinar?";
 
+const MSG_APOYO =
+  "Hola 👋 Me gustaría apoyar a la Fundación Sembrando Oportunidades Cali. ¿Cómo puedo vincularme?";
+
 // Setear links globales si existen
 const ctaTop = document.getElementById("ctaTop");
 if (ctaTop) ctaTop.href = waLink(WA_PRIMARY, MSG_GENERAL);
@@ -25,8 +28,8 @@ if (ctaInstructor) ctaInstructor.href = waLink(WA_PRIMARY, MSG_INSTRUCTOR);
 const ctaMobile = document.getElementById("ctaMobile");
 if (ctaMobile) ctaMobile.href = waLink(WA_PRIMARY, MSG_GENERAL);
 
-const ctaContactWA = document.getElementById("ctaContactWA");
-if (ctaContactWA) ctaContactWA.href = waLink(WA_PRIMARY, MSG_GENERAL);
+const ctaApoyo = document.getElementById("ctaApoyo");
+if (ctaApoyo) ctaApoyo.href = waLink(WA_PRIMARY, MSG_APOYO);
 
 // Inyectar número formateado en elementos con data-wa-phone
 document.querySelectorAll("[data-wa-phone]").forEach(function(el){
